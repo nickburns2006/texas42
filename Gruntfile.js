@@ -27,11 +27,6 @@ module.exports = function (grunt) {
         server: appConfig.serverPath || 'server'
     };
 
-    // Run install script if necessary
-    if ( !appConfig.installed ) {
-        helpers.doInstall();
-    }
-
     // ------------------------------------------------------
     // --
     // --   Task Config
@@ -407,21 +402,6 @@ module.exports = function (grunt) {
 
         // Shell execution commands
         shell: {
-            install: {
-                command: [
-                    'rm -r .git',
-                    'git init',
-                    'git add .',
-                    'git commit -m \'Initial commit\'',
-                    'bower install'
-                ].join('&&'),
-                options: {
-                    stdout: true,
-                    stderror: true,
-                    failOnError: true,
-                    callback: utils.emit( 'eventEnd:install' )
-                }
-            },
             server: {
                 command: [
                     'open http://localhost:' + appConfig.server.port,

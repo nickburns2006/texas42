@@ -1,0 +1,7 @@
+<div>
+    <span ng-repeat="h in dominoNums">
+        <span ng-repeat="l in dominoNums|limitTo:h+1">
+            <domino high="h" low="l"></domino>
+        </span>
+    </span>
+</div>

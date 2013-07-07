@@ -1,5 +1,5 @@
 {
-  "name": "yeoman-angular-express-plus",
+  "name": "texas42",
   "version": "0.1.0",
   "scripts": {
     "start": "server/server.js",

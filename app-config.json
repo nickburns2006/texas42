@@ -1,13 +1,13 @@
 {
     "info" : {
-        "name"          :   "yo-angular-express-plus",
-        "description"   :   "Yeoman scaffolded angular-express app with extra goodies",
+        "name"          :   "Texas 42",
+        "description"   :   "Texas 42 Dominoes Web App",
         "version"       :   "0.1.0",
         "author"        :   {
-            "name"    :   "author",
-            "email"   :   "email",
-            "url"     :   "url",
-            "twitter" :   "twitter"
+            "name"    :   "Stephen Golub",
+            "email"   :   "stephenhgolub@gmail.com",
+            "url"     :   "www.k5shg.org",
+            "twitter" :   "nickburns2006"
         }
     },
     "appPath"   :   "app",
@@ -19,8 +19,8 @@
     "database" : {
         "host"          : "localhost",
         "port"          : 27017,
-        "name"          : "test_db",
+        "name"          : "texas42",
         "collection"    : "test_col"
     },
-	"installed" :   false
+	"installed" :   true
 }

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module( 'yoAngularExpressTestApp' )
-    .controller( 'MainCtrl', [ '$scope', 'socket', '$location', '$window', function( $scope, socket, $location, $window ) {
+angular.module('texas42App')
+  .controller('Texas42Ctrl', function ($scope, socket, $window) {
 
         $scope.awesomeClientThings = [
             'HTML5 Boilerplate',
@@ -66,4 +66,6 @@ angular.module( 'yoAngularExpressTestApp' )
             $window.location.href = path;
         };
 
-    }]);
+      
+        $scope.dominoNums = _.range(7);
+  });

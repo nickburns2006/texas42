@@ -12,3 +12,8 @@ logs
 results
 
 npm-debug.log
+
+app/components*
+node_modules/
+bower_components/
+dist/

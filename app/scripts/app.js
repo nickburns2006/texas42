@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module( 'yoAngularExpressTestApp', [ 'ui.bootstrap', 'btford.socket-io' ])
+angular.module( 'texas42App', [ 'ui.bootstrap', 'btford.socket-io' ])
     .config( [ '$routeProvider', '$locationProvider', function ( $routeProvider, $locationProvider ) {
         $routeProvider
         .when( '/', {
             // @todo fix this
-            templateUrl: 'scripts/main/mainView.html',
-            controller: 'MainCtrl'
+            templateUrl: 'views/Texas42.html',
+            controller: 'Texas42Ctrl'
         })
         .otherwise({
             redirectTo: '/'
