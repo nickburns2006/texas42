@@ -1,11 +1,80 @@
-<div class='domino'>
-    <div class='high'>
-        {{ high }}
-        <div class="dot dot-{{ d }}" ng-repeat="d in dotHigh"></div>
+<div id="tridiv" class="domino">
+  <div class="scene" style="-webkit-transform:rotateX(-46deg) rotateY(-56deg); -moz-transform:rotateX(-46deg) rotateY(-56deg); -ms-transform:rotateX(-46deg) rotateY(-56deg); transform:rotateX(-46deg) rotateY(-56deg); ">
+    <div class="shape cuboid-1 domino">
+      <div class="face ft">
+        <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.2);"></div>
+      </div>
+      <div class="face bk">
+        <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+      </div>
+      <div class="face rt">
+        <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.439216);"></div>
+      </div>
+      <div class="face lt">
+        <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.160784);"></div>
+      </div>
+      <div class="face bm">
+        <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.576471);"></div>
+      </div>
+      <div class="face tp">
+        <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.0235294);">
+            <div class='domino_face'>
+                <div class='high'>
+                    {{ high }}
+                    <div class="dot dot-{{ d }}" ng-repeat="d in dotHigh"></div>
+                </div>
+                <hr />
+                <div class="low">
+                    {{ low }}
+                    <div class="dot dot-{{ d }}" ng-repeat="d in dotLow"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="cr cr-0">
+        <div class="face side s0">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.164706);"></div>
+        </div>
+        <div class="face side s1">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.12549);"></div>
+        </div>
+        <div class="face side s2">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.137255);"></div>
+        </div>
+      </div>
+      <div class="cr cr-1">
+        <div class="face side s0">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.192157);"></div>
+        </div>
+        <div class="face side s1">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.27451);"></div>
+        </div>
+        <div class="face side s2">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.356863);"></div>
+        </div>
+      </div>
+      <div class="cr cr-2">
+        <div class="face side s0">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.431373);"></div>
+        </div>
+        <div class="face side s1">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.470588);"></div>
+        </div>
+        <div class="face side s2">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.462745);"></div>
+        </div>
+      </div>
+      <div class="cr cr-3">
+        <div class="face side s0">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.403922);"></div>
+        </div>
+        <div class="face side s1">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.32549);"></div>
+        </div>
+        <div class="face side s2">
+          <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.239216);"></div>
+        </div>
+      </div>
     </div>
-    <hr />
-    <div class="low">
-        {{ low }}
-        <div class="dot dot-{{ d }}" ng-repeat="d in dotLow"></div>
-    </div>
+  </div>
 </div>
