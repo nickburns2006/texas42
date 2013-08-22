@@ -1,4 +1,3 @@
-
 @import "./../bootstrap/bootstrap";
 @import "../bootstrap/responsive";
 @import "../font-awesome-more/font-awesome";
@@ -127,4 +126,184 @@
 
 .scale-half {
     .scale(.5);
+}
+
+/* 3D Domino CSS */
+/* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ 
+#tridiv {
+  perspective: 800px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 375%;
+}
+.face {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 50%;
+  left: 50%;
+  margin: -40em 0 0 -40em;
+}
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+}
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+/* .domino styles */
+.domino {
+  transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:2em;
+  height:.375em;
+  margin:-0.1875em 0 0 -1em;
+}
+.domino .ft {
+  transform:translateZ(0.5em);
+}
+.domino .bk {
+  transform:translateZ(-0.5em) rotateY(180deg);
+}
+.domino .rt, .domino .lt {
+  width:1em;
+  height:.375em;
+}
+.domino .tp, .domino .bm {
+  width:2em;
+  height:1em;
+}
+.domino .face {
+  background-color:#FFFFFF;
+}
+.domino .ft {
+  width:1.75em;
+  margin-left:.125em;
+}
+.domino .bk {
+  width:1.75em;
+  margin-left:-0.125em;
+}
+.domino .rt, .domino .lt {
+  width:0.75em;
+}
+.domino .tp, .domino .bm, .domino .tp .photon-shader, .domino .bm .photon-shader {
+  border-radius:.125em;
+}
+.domino .cr {
+  width:.125em;
+  left:0.0625em;
+}
+.domino .cr-0 {
+  transform: translate3D(1.75em, 0, 0.375em);
+}
+.domino .cr-1 {
+  transform: translate3D(1.75em, 0, -0.375em);
+}
+.domino .cr-2 {
+  transform: translate3D(0, 0, -0.375em);
+}
+.domino .cr-3 {
+  transform: translate3D(0, 0, 0.375em);
+}
+.domino .cr-0 .s0 {
+  transform: rotateY(15deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-0 .s1 {
+  transform: rotateY(45deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-0 .s2 {
+  transform: rotateY(75deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-1 .s0 {
+  transform: rotateY(105deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-1 .s1 {
+  transform: rotateY(135deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-1 .s2 {
+  transform: rotateY(165deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-2 .s0 {
+  transform: rotateY(195deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-2 .s1 {
+  transform: rotateY(225deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-2 .s2 {
+  transform: rotateY(255deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-3 .s0 {
+  transform: rotateY(285deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-3 .s1 {
+  transform: rotateY(315deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .cr-3 .s2 {
+  transform: rotateY(345deg) translate3D(-50%, 0, 0.1em);
+}
+.domino .side {
+  width:0.09198729810778067em;
 }
