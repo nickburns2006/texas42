@@ -46,6 +46,19 @@
     background-color: #000;
 }
 
+.domino .front  { transform: rotateY(   0deg); }
+.domino .back   { transform: rotateX( 180deg); }
+.domino .right  { transform: rotateY(  90deg); }
+.domino .left   { transform: rotateY( -90deg); }
+.domino .top    { transform: rotateX(  90deg); }
+.domino .bottom { transform: rotateX( -90deg); }
+
+.domino .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
+.domino .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
+.domino .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
+.domino .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
+.domino .top    { transform: rotateX(  90deg ) translateZ( 100px ); }
+.domino .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
 
 .dot-x (@n) when (@n=0),(@n=2),(@n=4) {
     left: 25px;
